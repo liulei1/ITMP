@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ITMP"
+  id="myeclipse.1468763862097"
+  context-root="/ITMP"
+  j2ee-spec="5.0"
+  archive="ITMP.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

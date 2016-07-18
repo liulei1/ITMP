@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.gtja.domain.ReqTrack" table="reqTrack">
+	
+		<id name="id">
+			<generator class="uuid"/>
+		</id>
+		
+		<property name="jiraKey"/>
+		<property name="phase"/>
+		<property name="startTime"/>
+		<property name="endTime"/>
+		<property name="handler"/>
+		<property name="hours"/>
+		<property name="point"/>
+		
+		<many-to-one name="softReq" column="softReqId" unique="true" cascade="all-delete-orphan" lazy="false" class="cn.gtja.domain.SoftReq"></many-to-one>
+		<many-to-one name="secondReq" column="secondReqId" unique="true" cascade="all-delete-orphan" lazy="false" class="cn.gtja.domain.SecondReq"></many-to-one>
+	</class>
+</hibernate-mapping>

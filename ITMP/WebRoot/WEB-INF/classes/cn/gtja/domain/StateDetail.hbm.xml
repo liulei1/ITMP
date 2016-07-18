@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.gtja.domain.StateDetail" table="stateDetail">
+	
+		<id name="id">
+			<generator class="uuid"/>
+		</id>
+		
+		<property name="draftTime"/>
+		<property name="submitTime"/>
+		<property name="approvalTime"/>
+		<property name="confirmTime"/>
+		<property name="reqAnalysisTime"/>
+		<property name="sysDesignTime"/>
+		<property name="softDevelopTime"/>
+		<property name="integTestTime"/>
+		<property name="sysTestTime"/>
+		<property name="uatTestTime"/>
+		<property name="testRunTime"/>
+		<property name="finishTime"/>
+		<property name="suspendTime"/>
+		<property name="changeTime"/>
+		<property name="cancelTime"/>
+		
+		<one-to-one name="firstReq" class="cn.gtja.domain.FirstReq" property-ref="stateDetail"/>
+		<one-to-one name="secondReq" class="cn.gtja.domain.SecondReq" property-ref="stateDetail"/>
+		<one-to-one name="softReq" class="cn.gtja.domain.SoftReq" property-ref="stateDetail"/>
+	</class>
+</hibernate-mapping>

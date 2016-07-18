@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.gtja.domain.SoftReq" table="softReq">
+	
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="reqNum"/>
+		<property name="unifiedNum"/>
+		<property name="reqState"/>
+		<property name="reqSort"/>
+		<property name="reqName"/>
+		<property name="outline"/>
+		<property name="description"/>
+		<property name="filePath"/>
+		<property name="fileName"/>
+		<property name="updateTime"/>
+		<property name="createTime"/>
+		<property name="belGroup"/>
+		<property name="belProject"/>
+		<property name="belSystem"/>
+		<property name="selfDefinedLabel"/>
+		<property name="hours"/>
+		<property name="budget"/>
+		<property name="point"/>
+		<property name="confirmor"/>
+		<property name="designer"/>
+		<property name="developer"/>
+		<property name="tester"/>
+		
+		<many-to-one name="stateDetail" column="stateDetail" unique="true" cascade="all-delete-orphan" lazy="false" class="cn.gtja.domain.StateDetail"></many-to-one>
+		<many-to-one name="secondReq" column="secondReqId" unique="true" cascade="all-delete-orphan" lazy="false" class="cn.gtja.domain.SecondReq"></many-to-one>
+		<set name="logs" cascade="all-delete-orphan" inverse="true" lazy="false">
+			<key column="softReqId"></key>
+			<one-to-many class="cn.gtja.domain.LogTable"/>
+		</set>
+		<set name="reqTracks" cascade="all-delete-orphan" inverse="true" lazy="false">
+			<key column="softReqId"></key>
+			<one-to-many class="cn.gtja.domain.ReqTrack"/>
+		</set>
+	</class>
+</hibernate-mapping>
