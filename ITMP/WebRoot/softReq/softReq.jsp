@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <title>软件需求</title>
-    <jsp:include page="basejs.jsp"></jsp:include>
+    <jsp:include page="../basejs.jsp"></jsp:include>
     <link href="${pageContext.request.contextPath}/files/softReq/styles.css" type="text/css" rel="stylesheet"/>
     <script src="${pageContext.request.contextPath}/files/softReq/data.js"></script>
   </head>

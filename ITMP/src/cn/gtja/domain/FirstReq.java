@@ -15,8 +15,8 @@ public class FirstReq {
 	private String timeExpected;	// 期望上线时间
 	private String reqName;			// 需求名称
 	private String reqSort;			// 需求分类
-	private String timeUpdate;		// 修改时间
-	private String timeCreate;		// 创建时间
+	private String updateTime;		// 修改时间
+	private String createTime;		// 创建时间
 	private String belGroup;		// 所属组
 	private String belProject;		// 所属项目
 	private String belSystem;		// 所属系统
@@ -24,7 +24,7 @@ public class FirstReq {
 
 	private Employee employee;			// 关联的员工
 	private StateDetail stateDetail;	// 关联的状态详情
-	private Set<SecondReq> secondReqs;	// 关联的状态详情
+	private Set<SecondReq> secondReqs;	// 关联的二级
 	
 	public Set<SecondReq> getSecondReqs() {
 		return secondReqs;
@@ -66,20 +66,20 @@ public class FirstReq {
 		this.reqSort = reqSort;
 	}
 
-	public String getTimeUpdate() {
-		return timeUpdate;
+	public String getUpdateTime() {
+		return updateTime;
 	}
 
-	public void setTimeUpdate(String timeUpdate) {
-		this.timeUpdate = timeUpdate;
+	public void setUpdateTime(String updateTime) {
+		this.updateTime = updateTime;
 	}
 
-	public String getTimeCreate() {
-		return timeCreate;
+	public String getCreateTime() {
+		return createTime;
 	}
 
-	public void setTimeCreate(String timeCreate) {
-		this.timeCreate = timeCreate;
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
 	}
 
 	public String getBelProject() {

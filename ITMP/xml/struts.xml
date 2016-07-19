@@ -6,7 +6,11 @@
 <struts>
 	<constant name="struts.devMode" value="true" />
     
-	<package name="basicstruts" namespace="/user" extends="struts-default">
-
+	<package name="basicstruts" namespace="/firstReq" extends="struts-default">
+		<action name="firstReq_*" method="{1}" class="cn.gtja.action.FirstReqAction">
+			<result name="addFirstReqSUCCESS">/start.jsp</result>
+			<result name="findAllFirstReqSUCCESS">/firstReq/firstReq_list.jsp</result>
+			<result name="viewDetailsSUCCESS">/firstReq.jsp</result>
+		</action>
 	</package>
 </struts>

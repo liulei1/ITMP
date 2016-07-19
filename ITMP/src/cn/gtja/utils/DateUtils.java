@@ -78,4 +78,10 @@ public class DateUtils {
 		calendar.add(Calendar.MONTH, month);
 		return dateToString(calendar.getTime());
 	}
+	
+	public static int getYearOfDay(){
+		Calendar calendar = new GregorianCalendar();
+		int year = calendar.get(Calendar.YEAR);
+		return year;
+	}
 }

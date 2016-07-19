@@ -18,5 +18,6 @@ public interface BaseConstant {
 	public static final String REQ_STATE_CHANGE = "13";
 	public static final String REQ_STATE_CANCEL = "14";
 	
-	
+	public static final String REQ_SORT_NEW = "0";		// 需求分类 新需求
+	public static final String REQ_SORT_CHANGE = "1";	// 需求分类 需求变更
 }

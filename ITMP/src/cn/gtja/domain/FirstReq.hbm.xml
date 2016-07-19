@@ -15,8 +15,8 @@
 		<property name="timeExpected"/>
 		<property name="reqName"/>
 		<property name="reqSort"/>
-		<property name="timeUpdate"/>
-		<property name="timeCreate"/>
+		<property name="updateTime"/>
+		<property name="createTime"/>
 		<property name="belGroup"/>
 		<property name="belProject"/>
 		<property name="belSystem"/>

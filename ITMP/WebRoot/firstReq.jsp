@@ -140,27 +140,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
       <!-- Unnamed (文本框) -->
       <div id="u18" class="ax_default text_field">
-        <input id="u18_input" type="text" value="UR000001（自动编号）"/>
+        <input id="u18_input" type="text" name="统一编号（一级）*" value="${model.unifiedNum }"/>
       </div>
 
       <!-- Unnamed (文本框) -->
       <div id="u19" class="ax_default text_field">
-        <input id="u19_input" type="text" value="2016年12月1日"/>
+        <input id="u19_input" type="text" name="期望上线时间*" value="2016年12月1日"/>
       </div>
 
       <!-- Unnamed (文本框) -->
       <div id="u20" class="ax_default text_field">
-        <input id="u20_input" type="text" value="XXXXXXXXXXXX"/>
+        <input id="u20_input" type="text" name="需求名称*" value="${model.reqName }"/>
       </div>
 
       <!-- Unnamed (文本框) -->
       <div id="u21" class="ax_default text_field">
-        <input id="u21_input" type="text" value="毕志刚"/>
+        <input id="u21_input" type="text" name="提出人*" value="毕志刚"/>
       </div>
 
       <!-- Unnamed (文本框) -->
       <div id="u22" class="ax_default text_field">
-        <input id="u22_input" type="text" value="网络金融部"/>
+        <input id="u22_input" type="text" name="提出部门*" value="${model.belGroup }"/>
       </div>
 
       <!-- Unnamed (矩形) -->
@@ -439,7 +439,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
       <!-- Unnamed (文本框) -->
       <div id="u81" class="ax_default text_field">
-        <input id="u81_input" type="text" value="草稿（计算）"/>
+        <input id="u81_input" type="text" name="需求状态" value="${model.reqState}"/>
       </div>
 
       <!-- Unnamed (矩形) -->
@@ -453,31 +453,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
       <!-- Unnamed (文本框) -->
       <div id="u84" class="ax_default text_field">
-        <input id="u84_input" type="text" value="归入项目内，自动编号"/>
+        <input id="u84_input" type="text" name="需求编号" value="${model.reqNum }"/>
       </div>
-
-      <!-- Unnamed (单选按钮) -->
-      <div id="u85" class="ax_default radio_button">
-        <label for="u85_input">
-          <!-- Unnamed () -->
-          <div id="u86" class="text" style="visibility: visible;">
-            <p><span>新需求</span></p>
-          </div>
-        </label>
-        <input id="u85_input" type="radio" value="radio" name="u85" checked/>
-      </div>
-
-      <!-- Unnamed (单选按钮) -->
-      <div id="u87" class="ax_default radio_button">
-        <label for="u87_input">
-          <!-- Unnamed () -->
-          <div id="u88" class="text" style="visibility: visible;">
-            <p><span>需求变更</span></p>
-          </div>
-        </label>
-        <input id="u87_input" type="radio" value="radio" name="u87"/>
-      </div>
-
+	  
+	  <div id="u85" class="ax_default radio_button">
+		<!-- <input class="form-control" name="reqSort"> -->
+		<label class="checkbox-inline">
+	      <input type="radio" name="reqSort" value="0" checked> 新需求
+	   	</label>
+	  </div>
+	  <div id="u87" class="ax_default radio_button">
+		<label class="checkbox-inline">
+	      <input type="radio" name="reqSort" value="1"> 需求变更
+	   	</label>
+	  </div>
+		   	
       <!-- Unnamed (矩形) -->
       <div id="u89" class="ax_default box_1">
         <div id="u89_div" class=""></div>
@@ -797,7 +787,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
       <!-- Unnamed (文本框) -->
       <div id="u158" class="ax_default text_field">
-        <input id="u158_input" type="text" value=""/>
+        <input id="u158_input" type="text" name="修改时间" value="${model.updateTime }"/>
       </div>
 
       <!-- Unnamed (矩形) -->
