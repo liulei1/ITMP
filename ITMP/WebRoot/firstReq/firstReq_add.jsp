@@ -11,6 +11,10 @@
 <link href="${pageContext.request.contextPath}/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
 <script src="${pageContext.request.contextPath}/bootstrap3/js/jquery-1.9.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/bootstrap3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="${pageContext.request.contextPath}/calendarjs/lhgcore.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/calendarjs/lhgcalendar.js"></script>
+
 <script type="text/javascript">
 	$(function(){
 	
@@ -129,7 +133,7 @@
 			<div class="form-group">
 				<label class="col-sm-2 control-label col-sm-offset-3">期望上线时间</label>
 				<div class="col-sm-2">
-					<input class="form-control" type="date" name="timeExpected">
+					<input class="form-control" type="date" name="timeExpected" onclick="J.calendar.get({dir:'right'});">
 				</div>
 			</div>
 			<div class="form-group">
